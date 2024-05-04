@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components";
+import { Banner, Header } from "@/components";
 
 
 export const metadata: Metadata = {
@@ -19,6 +19,8 @@ export default function RootLayout({
 
       <body>
         <Header/>
+      <Banner/>
+
         {children}
         {/* footer */}
         </body>
