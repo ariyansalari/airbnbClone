@@ -1,2 +1,6 @@
 export * from "./Header"
 export * from "./Banner"
+export * from "./LocationCards"
+export * from "./CityCard"
+export * from "./LargeCard"
+export * from "./Footer"
