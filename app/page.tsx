@@ -4,7 +4,6 @@ import { cityCard } from "@/constant";
 export default  async function Home() {
     const locationRes=await fetch("https://66375b8c288fedf693801bf8.mockapi.io/airbnblocation")
     const locationResult =await locationRes.json()
- console.log(locationResult);
  
   return (
     <main className="max-w-7xl mx-auto px-8  sm:px-16 ">
