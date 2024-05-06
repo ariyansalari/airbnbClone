@@ -1,29 +1,32 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+'use client'
 import "./globals.css";
+import '../tailwind/global.css'
 import { Banner, Footer, Header } from "@/components";
+import {  usePathname } from "next/navigation";
 
 
-export const metadata: Metadata = {
-  title: "AirBnb",
-  description: "airbnb",
-};
+
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname=usePathname()
+  const searchPage=pathname==='/search'
+  const params= new URLSearchParams()
+
+  
   return (
     <html lang="en">
 
       <body>
-        <Header/>
-      <Banner/>
+      <Header/>
+        {!searchPage&& <Banner/>}
 
         {children}
         {/* footer */}
-        <Footer/>
+       <Footer/>
         </body>
     </html>
   );
