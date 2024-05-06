@@ -1,6 +1,10 @@
 import { CityCard, LargeCard, LocationCards } from "@/components";
 import { cityCard } from "@/constant";
-
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "home | airbnb",
+  description: "airbnb",
+};
 export default  async function Home() {
     const locationRes=await fetch("https://66375b8c288fedf693801bf8.mockapi.io/airbnblocation")
     const locationResult =await locationRes.json()
