@@ -58,10 +58,8 @@ const Search = async ({ searchParams }: { searchParams: any }) => {
         </div>
       </section>
       <section className="hidden xl:inline-flex xl:min-w-[600px]">
-      <MapBox />
-
+        {typeof window !== undefined && <MapBox />}
       </section>
-
     </main>
   );
 };

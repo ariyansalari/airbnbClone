@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 import ProgressBar from "@badrap/bar-of-progress";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 
 const progress = new ProgressBar({
   size: 8,
@@ -35,7 +35,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Suspense>
         <Header />
+        </Suspense>
         {!searchPage && <Banner />}
 
         {children}
