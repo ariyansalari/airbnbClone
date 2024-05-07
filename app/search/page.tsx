@@ -3,9 +3,8 @@ import { format } from "date-fns";
 import React from "react";
 
 const Search = async({searchParams}:{searchParams:any}) => {
-    const searchResult=await fetch('https://links.papareact.com/isz')
+    const searchResult=await fetch('https://663a5dfe1ae792804bef15cc.mockapi.io/Properties')
     const res=await searchResult.json()
-    console.log(res);
     
     const {location,startDate,endDate,guest}=searchParams
     const formattedStartDate=format(new Date(startDate),'dd MMMM yy')
