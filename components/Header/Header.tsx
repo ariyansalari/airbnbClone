@@ -34,7 +34,6 @@ export const Header = () => {
     setSearchInput("");
   };
   const params=useSearchParams()
-console.log(params);
 
   const search = () => {
     router.push(
