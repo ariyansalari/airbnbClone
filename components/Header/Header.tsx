@@ -33,6 +33,8 @@ export const Header = () => {
   const restInput = () => {
     setSearchInput("");
   };
+  console.log('test from here');
+  
   const params=useSearchParams()
 
   const search = () => {
