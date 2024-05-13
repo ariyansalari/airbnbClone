@@ -35,6 +35,7 @@ export const Header = () => {
   };
   
   const params=useSearchParams()
+console.log(params);
 
   const search = () => {
     router.push(
